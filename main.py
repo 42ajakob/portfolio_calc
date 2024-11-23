@@ -1,14 +1,21 @@
 import sys
+import sys
 from calc import *
 from print_results import *
 
 def calc_and_print(etfs_return, start_date, end_date):
 	loop = len(etfs_return)
 	annual_rate = []
+def calc_and_print(etfs_return, start_date, end_date):
+	loop = len(etfs_return)
+	annual_rate = []
 
 	for i in range(loop):
 		annual_rate.append(calc_annual_rate(start_date[i], end_date[i], etfs_return[i]))
+		annual_rate.append(calc_annual_rate(start_date[i], end_date[i], etfs_return[i]))
 
+	etfs_weight = calc_weight(annual_rate, loop)
+	total_interest = calc_total_interest(annual_rate, etfs_weight)
 	etfs_weight = calc_weight(annual_rate, loop)
 	total_interest = calc_total_interest(annual_rate, etfs_weight)
 
