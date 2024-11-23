@@ -1,12 +1,11 @@
 from datetime import datetime
-from init import alloc_float_arr
 
 def calc_weight(etfs_return, loop):
-	etfs_weight = alloc_float_arr(loop)
+	etfs_weight = []
 	etf_sum = sum(etfs_return)
 
 	for i in range(len(etfs_return)):
-		etfs_weight[i] = etfs_return[i] / etf_sum
+		etfs_weight.append(etfs_return[i] / etf_sum)
 
 	return etfs_weight
 
