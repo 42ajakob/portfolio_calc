@@ -1,4 +1,4 @@
-# A simple investment Portfolio calculator written in python.
+# A simple investment Portfolio weight calculator written in python.
 
 Takes the individual Index Funds total returns over X amount of years as input.
 Returns the weight it would give each Fund individually based on it's contribution to the total return of the portfolio.
@@ -9,6 +9,7 @@ To have a convient way to do the math of my portfolio for me lol.
 No but seriously to have a easy evaluation of how well it would have competed in the past and what would have been the returns of this weighted allocation.
 I came up with this idea using the beauty of basic math to figure out how much weight each asset should have that depends on it's performance.
 Instead of guessing like "Mhmm ok I go 95% on America and 5% distributed equally on all the other ETFs".
+I don't say it's the best way to calculate your weight. It just looks fairly distributed and depending of future performance can change the weight.
 
 # Do I have to consider something when using it?
 That the input your giving is correct.
