@@ -16,7 +16,7 @@ It's not there to calculate your Stocks/Bonds distribution. This is ultimatly yo
 What you can use it for is figuring out the distrubtion of all your bonds or stocks.
 That's what it's designed for.
 And the last thing is that if you have 5 stocks in America and 2 for the rest of the world.
-Your gonna get a very high precentage for America. At least if America's Stock Market didn't burn by the time you read this.\
+Your gonna get a very high precentage for America. At least if America's Stock Market didn't burn by the time you read this.
 
 So you would have to put all the ETFs from America first into the calculator.
 And then use the total return of your America ETFs as a single ETF input in the calculator to get a more evenly spread asset allocation.
