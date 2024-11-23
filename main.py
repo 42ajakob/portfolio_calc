@@ -1,5 +1,4 @@
 from calc import *
-from init import *
 from print_results import *
 
 def main():
