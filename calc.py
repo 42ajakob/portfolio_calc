@@ -18,15 +18,8 @@ def calc_total_interest(etfs_return, etfs_weight):
 
 	return total_interest
 
-def calc_annual_rate(start_date_str, end_date_str, total_interest):
-	start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
-	end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
-
+def calc_annual_rate(start_date, end_date, total_interest):
 	years = (end_date - start_date).days / 365.25
-
-	if years <= 0:
-		raise ValueError("Wrong dates!")
-
 	annual_rate = (1 + total_interest) ** (1 / years) - 1
 
 	return annual_rate
