@@ -14,6 +14,12 @@ def calc_and_print(etfs_return, start_date, end_date):
 
 	print_results(total_interest, etfs_weight, annual_rate)
 
+	calc_weight_precise = calc_weight(etfs_return, loop)
+	calc_total_interest_precise = calc_total_interest(etfs_return, calc_weight_precise)
+	calc_annual_rate_based_on_etfs_return = calc_annual_rate(start_date[0], end_date[0], calc_total_interest_precise)
+
+	print_res(calc_annual_rate_based_on_etfs_return)
+
 	etfs_return.clear()
 	start_date.clear()
 	end_date.clear()
