@@ -17,7 +17,7 @@ def get_int(msg):
 def get_float(i):
 	while True:
 		try:
-			user_in = float(input(f"ETF[{i + 1}] total return: "))
+			user_in = float(input(f"ETF[{i + 1}] total return in percent: ")) / 100
 			if -sys.float_info.max <= user_in <= sys.float_info.max:
 				return user_in
 		except ValueError:
