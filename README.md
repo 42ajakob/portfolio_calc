@@ -20,7 +20,7 @@ Your gonna get a very high precentage for America. At least if America's Stock M
 
 So you would have to put all the ETFs from America first into the calculator.
 And then use the total return of your America ETFs as a single ETF input in the calculator to get a more evenly spread asset allocation.
-Those 100% you got from the first calculation. Well now you have to make it fit into the second calulation percentage. At least until I upgrade this calculator.
+Those 100% you got from the first calculation. Well now you have to make it fit into the second calculated percentage. At least until I upgrade this calculator.
 Sooooo GL HF with it.
 
 # Most important
