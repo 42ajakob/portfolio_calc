@@ -7,11 +7,12 @@ And returns the annual percentage of your portfolio.
 # Why does it exists?
 To have a convient way to do the math of my portfolio for me lol.
 No but seriously to have a easy evaluation of how well it would have competed in the past and what would have been the returns of this weighted allocation.
-I came up with this idea using the beauty of basic math to figure out how much weight each asset should have.
+I came up with this idea using the beauty of basic math to figure out how much weight each asset should have that depends on it's performance.
 Instead of guessing like "Mhmm ok I go 95% on America and 5% distributed equally on all the other ETFs".
 
 # Do I have to consider something when using it?
 That the input your giving is correct.
+The longest historical comperison possible for the ETFs. Since we invest for the long run.
 It's not there to calculate your Stocks/Bonds distribution. This is ultimatly your decision.
 What you can use it for is figuring out the distrubtion of all your bonds or stocks.
 That's what it's designed for.
