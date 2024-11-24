@@ -23,7 +23,7 @@ def read_file(file_path):
 		for line in file:
 			if "[total return in %] | [start_date DD.MM.YY] | [end_date DD.MM.YY]" in line.strip():
 				print(line.strip())
-				sys.exit(0)
+				return
 
 			if line.strip() == '':
 				calc_and_print_portfolio(etfs_return, start_date_list, end_date_list)
