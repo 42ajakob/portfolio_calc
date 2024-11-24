@@ -1,5 +1,4 @@
 import sys
-import sys
 from calc import *
 from print_results import *
 
@@ -22,6 +21,10 @@ def read_file(file_path):
 	with open(file_path, 'r') as file:
 		print("[Portfolio Weight Calculator]")
 		for line in file:
+			if "[total return in %] | [start_date DD.MM.YY] | [end_date DD.MM.YY]" in line.strip():
+				print(line.strip())
+				sys.exit(0)
+
 			if line.strip() == '':
 				calc_and_print_portfolio(etfs_return, start_date_list, end_date_list)
 				print()
@@ -40,6 +43,8 @@ def read_file(file_path):
 			etfs_return.append(value)
 			start_date_list.append(start_date)
 			end_date_list.append(end_date)
+
+	calc_and_print_portfolio(etfs_return, start_date_list, end_date_list)
 
 def main():
 	if len(sys.argv) != 2:
