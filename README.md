@@ -1,11 +1,11 @@
 # A simple Portfolio weight calculator written in python for investment
 Takes a file (portfolio_example.txt) that gives [ETFs return value] | [start date] | [end_date] as input.
-Returns ETFs weight, annual rate and annual rate based on the weight distribution.
+Returns ETFs weight, annual rate of each weighted ETF and annual rate of portfolio.
 The weight calculation is based on each Index Funds performance over it's period of time.
 
 # Why does it exists?
 To have a convient way to do the math of my portfolio for me lol.
-I came up with this idea using the beauty of basic math to figure out how much weight each asset should have that depends on it's performance.
+I came up with this idea using the beauty of basic math to figure out how much weight each asset should have that depends on it's past performance.
 Instead of guessing like "Mhmm ok I go 95% on America and 5% distributed equally on all the other ETFs".
 I don't say it's the best way to calculate your weight.
 It just looks fairly distributed and depending of your portfolios future performance can be readjusted.
@@ -13,10 +13,15 @@ It just looks fairly distributed and depending of your portfolios future perform
 # Execution
 Open your terminal. If your on windows cry or figure how to download this repository and execute a python script.
 ```
-git clone https://github.com/42ajakob/portfolio_weight_calc && cd portfolio_weight_calc && python main.py portfolio_example.txt
+git clone https://github.com/42ajakob/portfolio_weight_calc && cd portfolio_weight_calc
+```
+```
+python main.py portfolio_example.txt
 ```
 
 # Do I have to consider something when using it?
+It's most precise with the same start and end dates of your ETFs across your Portfolio. Also the annual rate weighted is less precise then the annual rate of your portfolio.
+
 It's not there to calculate your Stocks/Bonds distribution. Although you certainly can this is ultimatly your decision and depends on your situation.
 There is no formular to make this decision for you.
 
