@@ -55,4 +55,4 @@ def unprecise_calc(etfs_return, start_date, end_date):
 		ann_rate_weight.append(ann_rate_interest * weight[i])
 
 	print_warning()
-	print_results(weight, ann_rate_interest, total_interest, ann_rate, ann_rate_weight)
+	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight)
