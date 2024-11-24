@@ -27,15 +27,6 @@ def calc_ann_rate(start_date, end_date, total_interest):
 def calc_ann_rate_weight(rate, weight):
 	return rate * weight
 
-def calc_ann_rate_weight_precise(total_interest, ann_rate, weight):
-	return total_interest * ann_rate * weight
-
-def custom(ann_rate_weighted):
-	result = 0.0
-	for i in range(len(ann_rate_weighted)):
-		result += ann_rate_weighted[i]
-	return result
-
 def precise_calc(etfs_return, start_date, end_date):
 	loop = len(etfs_return)
 	ann_rate = []
