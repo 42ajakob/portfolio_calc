@@ -41,19 +41,17 @@ def read_file(file_path):
 			start_date_list.append(start_date)
 			end_date_list.append(end_date)
 
-	calc_and_print_portfolio(etfs_return, start_date_list, end_date_list)
-
 def main():
 	if len(sys.argv) != 2:
 		print("Usage: python main.py portfolio_example.txt")
 		sys.exit(1)
 
 	file_path = sys.argv[1]
-	# try:	
-	read_file(file_path)
-	# except:
-	# 	print("Error! File not found or wrong input")
-	# 	print("Try: python main.py portfolio_example.txt")
+	try:	
+		read_file(file_path)
+	except:
+		print("Error! File not found or wrong input")
+		print("Try: python main.py portfolio_example.txt")
 
 if __name__ == "__main__":
 	main()

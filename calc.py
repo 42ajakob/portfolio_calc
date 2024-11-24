@@ -33,7 +33,7 @@ def precise_calc(etfs_return, start_date, end_date):
 	ann_rate_weight = []
 
 	for i in range(loop):
-		ann_rate.append(calc_ann_rate(start_date[i], end_date[i], etfs_return[i]))
+		ann_rate.append(calc_ann_rate(start_date[0], end_date[0], etfs_return[i]))
 
 	weight = calc_weight(etfs_return, loop)
 	total_interest = calc_total_interest(etfs_return, weight)
