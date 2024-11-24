@@ -24,7 +24,7 @@ python main.py portfolio_example.txt
 - It's not with different start and end dates.
 The overall market gave different returns in the past and might lived throw crisis that affected the ETFs performance in the past.
 While the other ETFs performance where not affected of it because of missing data.
-- Rounding the result up and down and a year is 365.25 days in this calculator.
+- The results are rounded up and down and a year is 365.25 days in this calculator.
 - It's not there to calculate your Stocks/Bonds distribution. Although you certainly can this is ultimatly your decision and depends on your situation.
 There is no formular to make this decision for you.
 
