@@ -3,6 +3,8 @@ from calc import *
 from print_results import *
 
 def calc_and_print_portfolio(etfs_return, start_date, end_date):
+	if etfs_return == []:
+		return
 
 	if all(date == start_date[0] for date in start_date) and all(date == end_date[0] for date in end_date):
 		precise_calc(etfs_return, start_date, end_date)
@@ -12,6 +14,7 @@ def calc_and_print_portfolio(etfs_return, start_date, end_date):
 	etfs_return.clear()
 	start_date.clear()
 	end_date.clear()
+	print()
 
 def read_file(file_path):
 	etfs_return = []
@@ -26,7 +29,6 @@ def read_file(file_path):
 
 			if line.strip() == '':
 				calc_and_print_portfolio(etfs_return, start_date_list, end_date_list)
-				print()
 				continue
 
 			parts = line.strip().split('|')
