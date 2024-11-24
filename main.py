@@ -22,7 +22,6 @@ def read_file(file_path):
 		print("[Portfolio Weight Calculator]")
 		for line in file:
 			if "[total return in %] | [start_date DD.MM.YY] | [end_date DD.MM.YY]" in line.strip():
-				print(line.strip())
 				return
 
 			if line.strip() == '':
