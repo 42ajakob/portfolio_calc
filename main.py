@@ -5,27 +5,26 @@ from print_results import *
 
 def calc_and_print(etfs_return, start_date, end_date):
 	loop = len(etfs_return)
-	annual_rate = []
+	a_annual_rate = []
 
 	for i in range(loop):
-		annual_rate.append(calc_annual_rate(start_date[i], end_date[i], etfs_return[i]))
+		a_annual_rate.append(calc_annual_rate(start_date[i], end_date[i], etfs_return[i]))
 
-	etfs_weight = calc_weight(annual_rate, loop)
-	total_interest = calc_total_interest(annual_rate, etfs_weight)
-	calc_weight_precise = calc_weight(etfs_return, loop)
+	a_weight = calc_weight(a_annual_rate, loop)
+	a_total_interest = calc_total_interest(a_annual_rate, a_weight)
 
-	print_results(total_interest, calc_weight_precise, annual_rate)
+	print_results(a_weight, a_total_interest)
 
-	
-	calc_total_interest_precise = calc_total_interest(etfs_return, calc_weight_precise)
-	calc_annual_rate_based_on_etfs_return = calc_annual_rate(start_date[0], end_date[0], calc_total_interest_precise)
+	weight = calc_weight(etfs_return, loop)
+	total_interest = calc_total_interest(etfs_return, weight)
+	annual_rate = calc_annual_rate(start_date[0], end_date[0], total_interest)
 
-	print_res(calc_annual_rate_based_on_etfs_return)
+	print_res(annual_rate, weight)
 
 	etfs_return.clear()
 	start_date.clear()
 	end_date.clear()
-	annual_rate.clear()
+	a_annual_rate.clear()
 
 def read_file(file_path):
 	etfs_return = []
@@ -63,8 +62,7 @@ def main():
 		sys.exit(1)
 
 	file_path = sys.argv[1]
-	try:
-		
+	try:	
 		read_file(file_path)
 	except:
 		print("Error! File not found or wrong input")
