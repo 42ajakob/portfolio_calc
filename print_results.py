@@ -1,6 +1,5 @@
 def print_warning():
-	print("WARNING! less precise because of the different [start_date] and [end_date] accross all ETFs!")
-	print("RECOMMEND to use the same [start_date] and [end_date] across all ETFs to get a precise result!")
+	print("WARNING! Bad precision! Read README.md!")
 
 def print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight):
 	for i in range(len(weight)):
