@@ -38,7 +38,7 @@ def precise_calc(etfs_return, start_date, end_date):
 	for i in range(loop):
 		ann_rate_weight.append(ann_rate_interest * weight[i])
 
-	print_results(weight, ann_rate_interest, ann_rate, ann_rate_weight)
+	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight)
 
 def unprecise_calc(etfs_return, start_date, end_date):
 	loop = len(etfs_return)
@@ -49,9 +49,10 @@ def unprecise_calc(etfs_return, start_date, end_date):
 		ann_rate.append(calc_ann_rate(start_date[i], end_date[i], etfs_return[i]))
 
 	weight = calc_weight(ann_rate, loop)
-	total_interest = calc_total_interest(ann_rate, weight)
+	total_interest = calc_total_interest(etfs_return, weight)
+	ann_rate_interest = calc_total_interest(ann_rate, weight)
 	for i in range(loop):
-		ann_rate_weight.append(total_interest * weight[i])
+		ann_rate_weight.append(ann_rate_interest * weight[i])
 
 	print_warning()
-	print_results(weight, total_interest, ann_rate, ann_rate_weight)
+	print_results(weight, ann_rate_interest, total_interest, ann_rate, ann_rate_weight)
