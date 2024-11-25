@@ -22,7 +22,7 @@ def read_file(file_path):
 	end_date_list = []
 
 	with open(file_path, 'r') as file:
-		print("[Portfolio Weight Calculator]")
+		print("[Portfolio Weight Calculator]\n")
 		for line in file:
 			if "[total return in %] | [start_date DD.MM.YY] | [end_date DD.MM.YY]" in line.strip():
 				return
