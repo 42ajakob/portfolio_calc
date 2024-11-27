@@ -24,7 +24,7 @@ def read_file(file_path):
 	with open(file_path, 'r') as file:
 		print("[Portfolio Weight Calculator]\n")
 		for line in file:
-			if "[total return in %] | [start_date DD.MM.YY] | [end_date DD.MM.YY]" in line.strip():
+			if "[total return in %] | [start_date DD/MM/YY] | [end_date DD/MM/YY]" in line.strip():
 				return
 
 			if line.strip() == '':
@@ -38,8 +38,8 @@ def read_file(file_path):
 				continue
 
 			value = float(parts[0].strip()) / 100
-			start_date = datetime.strptime(parts[1].strip(), '%d.%m.%y').date()
-			end_date = datetime.strptime(parts[2].strip(), '%d.%m.%y').date()
+			start_date = datetime.strptime(parts[1].strip(), '%d/%m/%y').date()
+			end_date = datetime.strptime(parts[2].strip(), '%d/%m/%y').date()
 
 			etfs_return.append(value)
 			start_date_list.append(start_date)
