@@ -20,7 +20,7 @@ def calc_total_interest(etfs_return, etfs_weight):
 
 def calc_ann_rate(start_date, end_date, total_interest):
 	years = (end_date - start_date).days / 365.25
-	ann_rate = (1 + total_interest) ** (1 / years) - 1
+	ann_rate = total_interest / years
 
 	return ann_rate
 
