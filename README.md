@@ -27,6 +27,8 @@ While the other ETFs performance where not affected of it because of missing dat
 - The results are rounded up and down and a year is 365.25 days in this calculator.
 - It's not there to calculate your Stocks/Bonds distribution. Although you certainly can this is ultimatly your decision and depends on your situation.
 There is no formular to make this decision for you.
+- The "annual rate weighted" is less precise then the "Annual rate of portfolio"
+This is unfortunatly duo to how fixed pointer calculations work and/or how floats are limited by bytes. If you know you know.
 
 Another thing to consider is if you have 5 stocks in America and 2 for the rest of the world.
 Your gonna get a very high precentage for America. At least if America's Stock Market didn't burn by the time you read this.
