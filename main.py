@@ -2,14 +2,14 @@ import sys
 from calc import *
 from print_results import *
 
-def calc_with_weight(etfs_return, start_date_list, end_date_list, weight):
+def calc_with_weight(etfs_return, start_date_list, end_date_list, weight, money):
 	if etfs_return == []:
 		return
 
 	if all(date == start_date_list[0] for date in start_date_list) and all(date == end_date_list[0] for date in end_date_list):
-		precise_calc_with_weight(etfs_return, start_date_list, end_date_list, weight)
+		precise_calc_with_weight(etfs_return, start_date_list, end_date_list, weight, money)
 	else:
-		unprecise_calc_with_weight(etfs_return, start_date_list, end_date_list, weight)
+		unprecise_calc_with_weight(etfs_return, start_date_list, end_date_list, weight, money)
 	
 	etfs_return.clear()
 	start_date_list.clear()
@@ -17,21 +17,21 @@ def calc_with_weight(etfs_return, start_date_list, end_date_list, weight):
 	weight.clear()
 	print()
 
-def calc_and_print_portfolio(etfs_return, start_date, end_date):
+def calc_and_print_portfolio(etfs_return, start_date, end_date, money):
 	if etfs_return == []:
 		return
 
 	if all(date == start_date[0] for date in start_date) and all(date == end_date[0] for date in end_date):
-		precise_calc(etfs_return, start_date, end_date)
+		precise_calc(etfs_return, start_date, end_date, money)
 	else:
-		unprecise_calc(etfs_return, start_date, end_date)
+		unprecise_calc(etfs_return, start_date, end_date, money)
 	
 	etfs_return.clear()
 	start_date.clear()
 	end_date.clear()
 	print()
 
-def read_file(file_path):
+def read_file(file_path, money):
 	etfs_return = []
 	start_date_list = []
 	end_date_list = []
@@ -44,10 +44,10 @@ def read_file(file_path):
 				return
 
 			if line.strip() == '' and weight == []:
-				calc_and_print_portfolio(etfs_return, start_date_list, end_date_list)
+				calc_and_print_portfolio(etfs_return, start_date_list, end_date_list, money)
 				continue
 			elif line.strip() == '' and weight != []:
-				calc_with_weight(etfs_return, start_date_list, end_date_list, weight)
+				calc_with_weight(etfs_return, start_date_list, end_date_list, weight, money)
 				continue
 
 			parts = line.strip().split('|')
@@ -69,18 +69,19 @@ def read_file(file_path):
 			
 
 	if weight != []:
-		calc_with_weight(etfs_return, start_date_list, end_date_list, weight)
+		calc_with_weight(etfs_return, start_date_list, end_date_list, weight, money)
 	else:
-		calc_and_print_portfolio(etfs_return, start_date_list, end_date_list)
+		calc_and_print_portfolio(etfs_return, start_date_list, end_date_list, money)
 
 def main():
-	if len(sys.argv) != 2:
-		print("Usage: python main.py portfolio_example.txt")
+	if len(sys.argv) != 3:
+		print("Usage Example: python main.py portfolio_example.txt 500")
 		sys.exit(1)
 
 	file_path = sys.argv[1]
+	money = float(sys.argv[2])
 	# try:	
-	read_file(file_path)
+	read_file(file_path, money)
 	# except:
 	# 	print("Error! File not found or wrong input")
 	# 	print("Try: python main.py portfolio_example.txt")

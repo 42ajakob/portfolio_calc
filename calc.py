@@ -24,7 +24,7 @@ def calc_ann_rate(start_date, end_date, total_interest):
 
 	return ann_rate
 
-def precise_calc(etfs_return, start_date, end_date):
+def precise_calc(etfs_return, start_date, end_date, money):
 	loop = len(etfs_return)
 	ann_rate = []
 	ann_rate_weight = []
@@ -38,9 +38,9 @@ def precise_calc(etfs_return, start_date, end_date):
 	for i in range(loop):
 		ann_rate_weight.append(ann_rate[i] * weight[i])
 
-	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight)
+	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight, money)
 
-def unprecise_calc(etfs_return, start_date, end_date):
+def unprecise_calc(etfs_return, start_date, end_date, money):
 	loop = len(etfs_return)
 	ann_rate = []
 	ann_rate_weight = []
@@ -55,9 +55,9 @@ def unprecise_calc(etfs_return, start_date, end_date):
 		ann_rate_weight.append(ann_rate[i] * weight[i])
 
 	print_warning()
-	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight)
+	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight, money)
 
-def precise_calc_with_weight(etfs_return, start_date, end_date, weight):
+def precise_calc_with_weight(etfs_return, start_date, end_date, weight, money):
 	loop = len(etfs_return)
 	ann_rate = []
 	ann_rate_weight = []
@@ -70,9 +70,9 @@ def precise_calc_with_weight(etfs_return, start_date, end_date, weight):
 	for i in range(loop):
 		ann_rate_weight.append(ann_rate[i] * weight[i])
 
-	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight)
+	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight, money)
 
-def unprecise_calc_with_weight(etfs_return, start_date, end_date, weight):
+def unprecise_calc_with_weight(etfs_return, start_date, end_date, weight, money):
 	loop = len(etfs_return)
 	ann_rate = []
 	ann_rate_weight = []
@@ -86,4 +86,4 @@ def unprecise_calc_with_weight(etfs_return, start_date, end_date, weight):
 		ann_rate_weight.append(ann_rate[i] * weight[i])
 
 	print_warning()
-	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight)
+	print_results(weight, total_interest, ann_rate_interest, ann_rate, ann_rate_weight, money)
