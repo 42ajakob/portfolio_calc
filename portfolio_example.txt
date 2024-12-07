@@ -1,8 +1,8 @@
 Portfolio Example 1
-50 | 01.01.00 | 01.01.05
-42.42 | 05.02.15 | 10.09.20
+50 | 01/01/00 | 01/01/05
+42.42 | 05/02/15 | 10/09/20
 
 Portfolio Example 2
-23.12 | 12.12.22 | 13.12.23 | 35.00
+23.12 | 12/12/22 | 13/12/23 | 35/00
 
-[total return in %] | [start_date DD.MM.YY] | [end_date DD.MM.YY] | [OPTIONAL weight in %]
+[total return in %] | [start_date DD/MM/YY] | [end_date DD/MM/YY] | [OPTIONAL weight in %]

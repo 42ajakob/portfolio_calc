@@ -57,8 +57,8 @@ def read_file(file_path, money):
 				continue
 
 			value = float(parts[0].strip()) / 100
-			start_date = datetime.strptime(parts[1].strip(), '%d.%m.%y').date()
-			end_date = datetime.strptime(parts[2].strip(), '%d.%m.%y').date()
+			start_date = datetime.strptime(parts[1].strip(), '%d/%m/%y').date()
+			end_date = datetime.strptime(parts[2].strip(), '%d/%m/%y').date()
 			if len(parts) == 4:
 				fixed_weight = float(parts[3].strip()) / 100
 				weight.append(fixed_weight)
