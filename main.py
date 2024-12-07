@@ -80,11 +80,11 @@ def main():
 
 	file_path = sys.argv[1]
 	money = float(sys.argv[2])
-	# try:	
-	read_file(file_path, money)
-	# except:
-	# 	print("Error! File not found or wrong input")
-	# 	print("Try: python main.py portfolio_example.txt")
+	try:	
+		read_file(file_path, money)
+	except:
+		print("Error! File not found or wrong input")
+		print("Try: python main.py portfolio_example.txt")
 
 if __name__ == "__main__":
 	main()
